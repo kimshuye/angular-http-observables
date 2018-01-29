@@ -1,3 +1,7 @@
-<p>
-  my-component works!
-</p>
+<h1>
+  <p>    my-component works!  </p> <br>
+  {{title}}
+</h1>
+<img [src]="imageLink" > <img bind-src="imageLink" >
+<button (click)="runClick()">Click</button> <br>
+<input [value]="note" (input)="note = $event.target.value" (keyup.enter)="saySomething($event.target.value)" >  {{note}} <br>
