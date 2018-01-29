@@ -1,0 +1,25 @@
+<button (click)="showHeading = !showHeading">{{showHeading ? true : false}}</button><br><br>
+<label>Click me: <input type="checkbox" (click)="leader = !leader" checked> </label>
+<h1 *ngIf="showHeading"> <div *ngIf="leader"> template-directives works! </div> </h1><br/><br>
+
+<form name="myForm" >
+    <label><input type="radio" name="name" value="'John'">John</label><br/>
+    <label><input type="radio" name="name" value="'Sam'">Sam</label><br/>
+    <label><input type="radio" name="name" value="'Jeff'">Jeff</label><br/>
+</form><br><br>
+
+<input [value]="name" (input)="name = $event.target.value" (keyup.enter)="inputBox($event.target.value)" >  {{name}} <br>
+  
+<span [ngSwitch]="name">
+   <span *ngSwitchCase="'John'">John</span>
+   <span *ngSwitchCase="'Sam'">Sam</span>
+   <span *ngSwitchCase="'Jeff'">Jeff</span>
+   <span *ngSwitchDefault >Not Here</span>
+</span>
+<br>
+<br>
+<ul>
+  <li *ngFor="let color of colors " >
+    {{color}}
+  </li>
+</ul>
